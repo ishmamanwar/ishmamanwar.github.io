@@ -1,11 +1,11 @@
 export const SITE = {
   name: "Ishmam Anwar",
-  title: "Building clean, reliable web apps.",
-  intro:
-    "Full‑stack developer focused on React, Vue, ASP.NET Core, and performant UIs. I modernize systems and ship pragmatic DX.",
+  role: "Generalist Full Stack Software Developer",
+  location: "East Elmhurst, NY 11370",
+  email: "ishmam.anwar780@gmail.com",
   resumeHref: "/resume.pdf",
   social: {
-    github: "https://github.com/your-username",
-    linkedin: "https://www.linkedin.com/in/your-handle/",
+    github: "https://github.com/ishmamanwar",
+    linkedin: "https://www.linkedin.com/in/ishmam-anwar-b374a0158/",
   },
 } as const;
