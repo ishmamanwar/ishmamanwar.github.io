@@ -40,7 +40,7 @@ export default function ProjectsSection() {
     <section
       id="projects"
       aria-label="Projects"
-      className="scroll-mt-20 h-screen flex items-center justify-center relative overflow-hidden"
+      className="scroll-mt-20 min-h-screen py-20 relative overflow-hidden"
     >
       <div className="absolute inset-0 -z-10">
         <div className="h-full w-full [background-image:linear-gradient(45deg,rgba(0,0,0,0.02)_25%,transparent_25%),linear-gradient(-45deg,rgba(0,0,0,0.02)_25%,transparent_25%),linear-gradient(45deg,transparent_75%,rgba(0,0,0,0.02)_75%),linear-gradient(-45deg,transparent_75%,rgba(0,0,0,0.02)_75%)] dark:[background-image:linear-gradient(45deg,rgba(255,255,255,0.03)_25%,transparent_25%),linear-gradient(-45deg,rgba(255,255,255,0.03)_25%,transparent_25%),linear-gradient(45deg,transparent_75%,rgba(255,255,255,0.03)_75%),linear-gradient(-45deg,transparent_75%,rgba(255,255,255,0.03)_75%)] [background-size:20px_20px] [background-position:0_0,0_10px,10px_-10px,-10px_0px]" />
@@ -54,10 +54,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            id="projects-title"
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent scroll-mt-28 md:scroll-mt-24"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
