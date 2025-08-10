@@ -23,6 +23,21 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Auto-scroll to hero section when navigating to root URL (same as #top)
+  useEffect(() => {
+    // Check if we're at the root URL (no hash)
+    if (window.location.hash === "") {
+      // Small delay to ensure the page is fully rendered
+      const timer = setTimeout(() => {
+        const topSection = document.getElementById("top");
+        if (topSection) {
+          topSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   const scrollToTop = () => {
     const topSection = document.getElementById("top");
     if (topSection) {
