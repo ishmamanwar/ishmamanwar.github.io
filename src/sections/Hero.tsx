@@ -5,22 +5,24 @@ import { SITE } from "../data/site";
 function TypewriterText({
   text,
   speed = 100,
+  shouldStart = false,
 }: {
   text: string;
   speed?: number;
+  shouldStart?: boolean;
 }) {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (currentIndex < text.length) {
+    if (shouldStart && currentIndex < text.length) {
       const timeout = setTimeout(() => {
         setDisplayText((prev) => prev + text[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
       }, speed);
       return () => clearTimeout(timeout);
     }
-  }, [currentIndex, text, speed]);
+  }, [currentIndex, text, speed, shouldStart]);
 
   return (
     <span className="inline-block">
@@ -35,7 +37,7 @@ function TypewriterText({
   );
 }
 
-export default function Hero() {
+export default function Hero({ isLoading }: { isLoading: boolean }) {
   return (
     <section
       aria-label="Hero"
@@ -75,7 +77,11 @@ export default function Hero() {
             className="flex items-center justify-center"
           >
             <h2 className="text-lg md:text-xl lg:text-3xl text-neutral-700 dark:text-neutral-300 font-medium leading-tight">
-              <TypewriterText text={SITE.role} speed={80} />
+              <TypewriterText
+                text={SITE.role}
+                speed={80}
+                shouldStart={!isLoading}
+              />
             </h2>
           </motion.div>
 

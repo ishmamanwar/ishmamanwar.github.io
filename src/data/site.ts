@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Ishmam Anwar",
-  role: "Generalist Full Stack Software Developer",
+  role: "Full Stack Software Developer",
   location: "East Elmhurst, NY 11370",
   email: "ishmam.anwar780@gmail.com",
   resumeHref: "/resume.pdf",
