@@ -187,7 +187,3 @@ This is my personal portfolio project. However, if you find any issues or have s
 ## License
 
 This project is developed by Ishmam Anwar.
-
----
-
-**Built with ❤️ using React, TypeScript, and Tailwind CSS**
