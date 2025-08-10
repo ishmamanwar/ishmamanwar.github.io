@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="public/assets/logo.png" alt="Portfolio Logo" width="200">
+  <img src="public/assets/logo.png" alt="Ishmam Anwar Logo" width="200">
 </div>
 
 <h3 align="center">
-  A minimal black-and-white portfolio with light/dark mode, Framer Motion micro-animations, and a roadmap-style experience timeline
+  A modern, responsive portfolio website showcasing my skills, experience, and projects
 </h3>
 
 <h4 align="center">
@@ -16,16 +16,17 @@ Technologies used:
     <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
     <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
     <img src="https://img.shields.io/badge/framer-motion-%23000000.svg?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
-    <img src="https://img.shields.io/badge/github%20pages-%23000000.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
+    <img src="https://img.shields.io/badge/github_pages-%23333.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
+    <img src="https://img.shields.io/badge/github_actions-%232088FF.svg?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions">
 </p>
 
 ## 📋 Table of Contents
 
 1.  ⚙️ [Tech Stack](#tech-stack)
 2.  ✨ [Features](#features)
-3.  🚀 [Live Portfolio](#live-portfolio)
+3.  🚀 [Live Application](#live-application)
 4.  🛠️ [Deploy Locally](#deploy)
-5.  📁 [Project Structure](#project-structure)
+5.  🔄 [GitHub Actions Deployment](#github-actions-deployment)
 
 ## <a name="tech-stack">⚙️ Tech Stack </a>
 
@@ -33,48 +34,50 @@ Technologies used:
 
 👉 **TypeScript**: Enhanced JavaScript with static typing for better code quality and developer experience
 
-👉 **Vite**: Lightning-fast build tool and development server for modern web development
+👉 **Vite**: Lightning-fast build tool for modern web development with instant hot module replacement
 
-👉 **Tailwind CSS**: Utility-first CSS framework for rapid UI development with custom design system
+👉 **Tailwind CSS**: Utility-first CSS framework for rapid UI development and responsive design
 
-👉 **Framer Motion**: Production-ready motion library for React with smooth animations and micro-interactions
+👉 **Framer Motion**: Production-ready motion library for React with smooth animations and transitions
 
-👉 **GitHub Pages**: Free hosting platform for static websites with automatic deployment from GitHub repositories
+👉 **GitHub Pages**: Free hosting platform for static websites with automatic deployment
+
+👉 **GitHub Actions**: Automated CI/CD pipeline for building, testing, and deploying the portfolio to GitHub Pages
 
 ## <a name="features">✨ Features</a>
 
 1️⃣ **Responsive Design**: Seamless experience across desktop, tablet, and mobile devices
 
-2️⃣ **Theme Toggle**: Light and dark mode with smooth transitions and persistent preferences
+2️⃣ **Dark/Light Theme**: Toggle between dark and light modes with persistent user preference
 
-3️⃣ **Framer Motion**: Micro-animations and smooth transitions throughout the user experience
+3️⃣ **Smooth Animations**: Beautiful page transitions and micro-interactions using Framer Motion
 
-4️⃣ **Experience Timeline**: Roadmap-style layout showcasing professional journey and milestones
+4️⃣ **Interactive Navigation**: Smooth scrolling navigation with mobile-friendly dropdown menu
 
-5️⃣ **Project Showcase**: Interactive project display with desktop and mobile GIF previews
+5️⃣ **Professional Sections**: Well-organized portfolio sections including Hero, Experience, Projects, Skills, and Education
 
-6️⃣ **Skills Grid**: Organized skill categories with monochrome logo representations
+6️⃣ **Modern UI/UX**: Clean, professional design with gradient text effects and hover animations
 
-7️⃣ **Modern UI**: Clean, minimalist black-and-white design with excellent typography
+7️⃣ **Performance Optimized**: Fast loading times with optimized images and efficient code structure
 
-8️⃣ **Performance Optimized**: Fast loading with Vite build tool and optimized assets
+8️⃣ **Accessibility**: Semantic HTML and ARIA labels for better screen reader support
 
-9️⃣ **Type Safety**: Full TypeScript implementation for better development experience
+9️⃣ **SEO Ready**: Proper meta tags and structured content for search engine optimization
 
-1️⃣0️⃣ **GitHub Pages Ready**: Built-in deployment configuration for GitHub Pages hosting
+1️⃣0️⃣ **GitHub Integration**: Seamless deployment with GitHub Pages and Actions
 
-## <a name="live-portfolio">🚀 Live Portfolio</a>
+## <a name="live-application">🚀 Live Application</a>
 
 **Visit the deployed portfolio:** [https://ishmamanwar.github.io/](https://ishmamanwar.github.io/)
 
-The portfolio is fully deployed and ready to showcase!
+The portfolio is fully deployed and ready to showcase my work!
 
 ## <a name="deploy">🛠️ Deploy locally</a>
 
 Prerequisites:
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
+- [Node.js](https://nodejs.org/en) (version 16 or higher)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
 ```bash
@@ -95,110 +98,96 @@ npm run build
 npm run preview
 ```
 
-## <a name="project-structure">📁 Project Structure</a>
+## <a name="github-actions-deployment">🔄 GitHub Actions Deployment</a>
+
+This portfolio automatically deploys to GitHub Pages using GitHub Actions. The workflow:
+
+1. **Triggers**: Automatically runs on every push to the main branch
+2. **Builds**: Creates a production build using `npm run build`
+3. **Deploys**: Automatically deploys the built files to GitHub Pages
+4. **Updates**: Your live site updates within minutes of pushing changes
+
+### Workflow File Location
+
+The GitHub Actions workflow is located at: `.github/workflows/deploy.yml`
+
+### Manual Deployment
+
+If you prefer manual deployment:
+
+1. Run `npm run build` locally
+2. Copy contents of `dist/` folder to repository root
+3. Commit and push changes
+4. GitHub Pages will automatically serve the updated content
+
+## Project Structure
 
 ```
 ishmamanwar.github.io/
-├── public/                   # Static assets and HTML template
-│   ├── assets/              # Images, GIFs, and logo files
-│   └── resume.pdf           # Resume file
+├── public/                   # Static assets
+│   ├── assets/              # Images and logos
+│   └── favicon.ico          # Site favicon
 ├── src/
 │   ├── components/          # Reusable React components
-│   │   ├── Header.tsx       # Navigation and theme toggle
-│   │   ├── LoadingScreen.tsx # Loading animation
-│   │   └── ThemeToggle.tsx  # Light/dark mode switch
-│   ├── data/                # Content and configuration
-│   │   ├── experience.ts    # Professional experience data
-│   │   ├── logos.tsx        # Skill logos and icons
-│   │   ├── projects.ts      # Project information
-│   │   ├── site.ts          # Site configuration
-│   │   └── skills.ts        # Skills categorization
+│   │   ├── Header.tsx       # Navigation header
+│   │   ├── ThemeToggle.tsx  # Dark/light theme switcher
+│   │   └── LoadingScreen.tsx # Initial loading animation
 │   ├── sections/            # Main portfolio sections
-│   │   ├── Experience.tsx   # Experience timeline
-│   │   ├── Hero.tsx         # Introduction section
+│   │   ├── Hero.tsx         # Landing section
+│   │   ├── Experience.tsx   # Work experience
 │   │   ├── Projects.tsx     # Project showcase
-│   │   └── Skills.tsx       # Skills grid
+│   │   ├── Skills.tsx       # Technical skills
+│   │   └── Education.tsx    # Education & certifications
+│   ├── data/                # Static data and configuration
+│   │   ├── site.ts          # Site-wide configuration
+│   │   ├── experience.ts    # Experience data
+│   │   ├── projects.ts      # Projects data
+│   │   ├── skills.ts        # Skills data
+│   │   └── education.ts     # Education data
+│   ├── styles/              # Global styles
+│   │   └── index.css        # Tailwind CSS and custom styles
 │   ├── App.tsx              # Main application component
-│   ├── index.css            # Global styles
 │   └── main.tsx             # Application entry point
+├── index.html               # HTML template
+├── package.json             # Dependencies and scripts
 ├── tailwind.config.js       # Tailwind CSS configuration
 ├── tsconfig.json            # TypeScript configuration
 ├── vite.config.ts           # Vite build configuration
-└── README.md
+└── README.md                # This file
 ```
-
-## Content Customization
-
-### Update Personal Information
-
-Edit `src/data/site.ts` for:
-
-- Your name and role
-- Location and contact information
-- Resume file path
-- Social media links
-
-### Update Projects
-
-Edit `src/data/projects.ts` for:
-
-- Project names and descriptions
-- Technology stacks
-- Repository and live URLs
-- Desktop and mobile GIF previews
-
-### Update Experience
-
-Edit `src/data/experience.ts` for:
-
-- Professional experience items
-- Timeline dates and descriptions
-- Company information
-
-### Update Skills
-
-Edit `src/data/skills.ts` for:
-
-- Skill categories and items
-- Customize skill groupings
-- Update logos in `src/data/logos.tsx`
-
-## Deployment
-
-### GitHub Pages
-
-This repository includes `.github/workflows/pages.yml` for automatic deployment:
-
-1. Push changes to the `main` branch
-2. Go to GitHub repository Settings → Pages
-3. Set Source to "GitHub Actions"
-4. The portfolio will automatically deploy
-
-### Custom Domain
-
-For a custom domain, update the `base` in `vite.config.ts` and configure your domain settings.
 
 ## Design Philosophy
 
-This portfolio features a minimalist, monochrome design with:
+This portfolio features a modern, professional design with:
 
-- **Clean typography** and excellent readability
-- **Smooth animations** powered by Framer Motion
+- **Clean typography** with gradient text effects
+- **Smooth animations** and micro-interactions
 - **Responsive layout** that works on all devices
-- **Theme switching** between light and dark modes
-- **Professional aesthetic** suitable for software developers
+- **Professional color scheme** with dark/light theme support
+- **Intuitive navigation** with smooth scrolling
+- **Optimized performance** for fast loading times
+
+## Key Features
+
+- **Hero Section**: Eye-catching introduction with profile picture and call-to-action
+- **Experience Timeline**: Professional work history with detailed descriptions
+- **Project Showcase**: Featured projects with technologies and live links
+- **Skills Display**: Technical skills organized by category
+- **Education & Certifications**: Academic background and professional certifications
+- **Contact Information**: Easy access to resume, GitHub, and LinkedIn
 
 ## Contributing
 
-This portfolio is actively maintained. Feel free to:
+This is my personal portfolio project. However, if you find any issues or have suggestions:
 
 - Report bugs or issues
-- Suggest new features
-- Submit pull requests
-- Use as a template for your own portfolio
+- Suggest improvements
+- Fork for your own portfolio
 
 ## License
 
 This project is developed by Ishmam Anwar.
 
 ---
+
+**Built with ❤️ using React, TypeScript, and Tailwind CSS**
