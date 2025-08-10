@@ -55,7 +55,7 @@ export default function SkillsSection() {
     <section
       id="skills"
       aria-label="Skills"
-      className="scroll-mt-20 h-screen flex items-center justify-center relative overflow-hidden"
+      className="scroll-mt-20 min-h-screen py-20 relative overflow-hidden"
     >
       <div className="absolute inset-0 -z-10">
         <div className="h-full w-full [background-image:radial-gradient(ellipse_at_center,rgba(0,0,0,0.03)_0%,transparent_70%)] dark:[background-image:radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
@@ -139,6 +139,7 @@ export default function SkillsSection() {
           ))}
         </motion.div>
       </div>
+      <div className="h-20"></div>
     </section>
   );
 }
