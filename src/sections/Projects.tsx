@@ -54,7 +54,10 @@ export default function ProjectsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent">
+          <h2
+            id="projects-title"
+            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent scroll-mt-28 md:scroll-mt-24"
+          >
             Featured Projects
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
@@ -107,12 +110,12 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 md:gap-4">
-                  <figure className="border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
+                <div className="grid grid-cols-3 gap-3 md:gap-4">
+                  <figure className="col-span-2 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
                     <motion.img
                       src={p.desktopGif}
                       alt={p.name + " desktop preview"}
-                      className="w-full h-24 md:h-32 object-cover"
+                      className="w-full h-32 md:h-40 object-contain bg-neutral-50 dark:bg-neutral-800"
                       loading="lazy"
                       variants={imageVariants}
                       whileHover="hover"
@@ -121,11 +124,11 @@ export default function ProjectsSection() {
                       Desktop
                     </figcaption>
                   </figure>
-                  <figure className="border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
+                  <figure className="col-span-1 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
                     <motion.img
                       src={p.mobileGif}
                       alt={p.name + " mobile preview"}
-                      className="w-full h-24 md:h-32 object-cover"
+                      className="w-full h-32 md:h-40 object-contain bg-neutral-50 dark:bg-neutral-800"
                       loading="lazy"
                       variants={imageVariants}
                       whileHover="hover"
@@ -180,6 +183,7 @@ export default function ProjectsSection() {
           ))}
         </motion.div>
       </div>
+      <div className="h-20"></div>
     </section>
   );
 }

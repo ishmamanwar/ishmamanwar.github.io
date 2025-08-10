@@ -10,11 +10,20 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    name: "Chomchom",
+    name: "Chomchom - A simple pet management system",
     blurb: "Pet management webapp with feeding, meds, and vet scheduling.",
     tech: ["React", "Flask", "REST"],
-    repo: "https://github.com/your-username/chomchom",
-    live: "https://your-username.github.io/chomchom",
+    repo: "https://github.com/ishmamanwar/chomchom",
+    live: "https://chomchom.vercel.app",
+    desktopGif: "/assets/chomchom-desktop.gif",
+    mobileGif: "/assets/sample-mobile.gif",
+  },
+  {
+    name: "Sample Project 2",
+    blurb: "Sample project 2 blurb",
+    tech: ["React", "Flask", "REST"],
+    repo: "https://github.com/ishmamanwar/chomchom",
+    live: "https://chomchom.vercel.app",
     desktopGif: "/assets/sample-desktop.gif",
     mobileGif: "/assets/sample-mobile.gif",
   },
