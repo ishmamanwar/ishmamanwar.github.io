@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import ExperienceSection from "./sections/Experience";
 import ProjectsSection from "./sections/Projects";
 import SkillsSection from "./sections/Skills";
+import EducationSection from "./sections/Education";
 import { SITE } from "./data/site";
 
 export default function App() {
@@ -48,6 +49,7 @@ export default function App() {
           <ExperienceSection />
           <ProjectsSection />
           <SkillsSection />
+          <EducationSection />
         </main>
 
         <AnimatePresence>
