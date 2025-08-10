@@ -1,11 +1,39 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { Download, Menu, X } from "lucide-react";
 import { SITE } from "../data/site";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const MENU_EXIT_MS = 50;
+  const navigatingRef = useRef(false);
+
+  function scrollToHash(href: string) {
+    const id = href.startsWith("#") ? href.slice(1) : href;
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const header = document.querySelector("header") as HTMLElement | null;
+    const offset = (header?.offsetHeight ?? 0) + 8;
+
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    history.pushState(null, "", `#${id}`);
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  }
+
+  function handleMobileNavClick(href: string) {
+    return (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      if (navigatingRef.current) return;
+      navigatingRef.current = true;
+      setIsMobileMenuOpen(false);
+      setTimeout(() => {
+        scrollToHash(href);
+        navigatingRef.current = false;
+      }, MENU_EXIT_MS);
+    };
+  }
 
   const navItems = [
     { href: "#experience", label: "Experience" },
@@ -154,10 +182,10 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className="block py-3 text-lg font-medium text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors border-b border-neutral-100 dark:border-neutral-800"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handleMobileNavClick(item.href)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.05, delay: index * 0.1 }}
                 >
                   {item.label}
                 </motion.a>

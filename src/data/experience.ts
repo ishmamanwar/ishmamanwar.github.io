@@ -17,6 +17,7 @@ export const EXPERIENCE: ExperienceItem[] = [
       "Vue.js",
       "React.js",
       "ASP.NET Core",
+      ".NET Framework",
       "C#",
       "MySQL",
       "Azure DevOps",
@@ -31,7 +32,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     bullets: [
       "Core member of the Contracts team building reusable Vue.js components across the platform.",
       "Core developer of Lawbler, an internal low-code authoring tool that lets non-technical staff create and publish legal documents.",
-      "Built a Vue-based contract converter CLI (vue-contract-converter) that converts DCS XML to ACS JSON to speed authoring and local development.",
+      "Built a Vue-based contract converter CLI (vue-contract-converter) that converts DCS XML to ACS JSON for modernization.",
       "Refactored and extended RESTful APIs in ASP.NET Core to improve performance, modularity, and maintainability.",
       "Integrated MySQL stored procedures/functions to optimize queries, reduce redundancy, and enforce complex business rules.",
       "Led UI performance optimization using Lighthouse/Chrome DevTools, achieving up to 80% score improvements on critical pages.",

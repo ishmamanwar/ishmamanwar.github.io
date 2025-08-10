@@ -62,7 +62,7 @@ export default function Hero({ isLoading }: { isLoading: boolean }) {
           className="space-y-4 md:space-y-6"
         >
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight section-title bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
