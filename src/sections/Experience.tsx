@@ -52,7 +52,7 @@ export default function ExperienceSection() {
     <section
       id="experience"
       aria-label="Experience"
-      className="scroll-mt-20 h-screen flex items-center justify-center relative overflow-hidden"
+      className="scroll-mt-20 min-h-screen py-20 relative overflow-hidden"
     >
       <div className="absolute inset-0 -z-10">
         <div className="h-full w-full [background-image:radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.15)_1px,transparent_0)] dark:[background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_0)] [background-size:20px_20px]" />
@@ -107,6 +107,7 @@ export default function ExperienceSection() {
                     }}
                     transition={{ duration: 0.3 }}
                     className="w-6 h-6 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 rounded-full border-4 border-white dark:border-black shadow-lg relative group"
+                    style={{ marginLeft: "2.5px" }}
                   >
                     <motion.div
                       className="absolute inset-0 bg-neutral-400 dark:bg-neutral-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -139,8 +140,27 @@ export default function ExperienceSection() {
                           {item.company}
                         </p>
                         <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
+                          {item.location}
+                        </p>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
                           {item.period}
                         </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {item.tech.map((tech, techIndex) => (
+                            <motion.span
+                              key={techIndex}
+                              className="px-2 py-1 bg-gradient-to-r from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-700 text-neutral-700 dark:text-neutral-300 text-xs rounded-full font-medium border border-neutral-200 dark:border-neutral-600"
+                              whileHover={{
+                                scale: 1.05,
+                                backgroundColor: "rgba(0,0,0,0.1)",
+                                borderColor: "rgba(0,0,0,0.2)",
+                              }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              {tech}
+                            </motion.span>
+                          ))}
+                        </div>
                       </div>
 
                       <ul className="space-y-2 text-neutral-700 dark:text-neutral-200">
@@ -204,8 +224,27 @@ export default function ExperienceSection() {
                     {item.company}
                   </p>
                   <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
+                    {item.location}
+                  </p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
                     {item.period}
                   </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {item.tech.map((tech, techIndex) => (
+                      <motion.span
+                        key={techIndex}
+                        className="px-2 py-1 bg-gradient-to-r from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-700 text-neutral-700 dark:text-neutral-300 text-xs rounded-full font-medium border border-neutral-200 dark:border-neutral-600"
+                        whileHover={{
+                          scale: 1.05,
+                          backgroundColor: "rgba(0,0,0,0.1)",
+                          borderColor: "rgba(0,0,0,0.2)",
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
                 </div>
 
                 <ul className="space-y-2 text-neutral-700 dark:text-neutral-200">
@@ -232,6 +271,7 @@ export default function ExperienceSection() {
           ))}
         </motion.div>
       </div>
+      <div className="h-20"></div>
     </section>
   );
 }
