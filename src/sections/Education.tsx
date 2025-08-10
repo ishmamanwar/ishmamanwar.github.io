@@ -70,7 +70,6 @@ export default function EducationSection() {
           viewport={{ once: true, margin: "-10% 0% -10% 0%" }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"
         >
-          {/* Education Section */}
           <motion.div variants={itemVariants}>
             <motion.div
               whileHover={{ y: -8, scale: 1.02 }}
@@ -103,29 +102,9 @@ export default function EducationSection() {
                       transition={{ duration: 0.2 }}
                     >
                       <div className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <h4 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
-                            {edu.degree}
-                          </h4>
-                          {edu.pdfUrl && (
-                            <motion.a
-                              href={edu.pdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 text-white dark:text-black text-sm rounded-lg hover:from-neutral-800 hover:to-neutral-600 dark:hover:from-neutral-200 dark:hover:to-neutral-400 transition-all duration-300 font-medium"
-                              whileHover={{ scale: 1.05, y: -2 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <motion.div
-                                whileHover={{ rotate: 360 }}
-                                transition={{ duration: 0.6 }}
-                              >
-                                <ExternalLink size={14} />
-                              </motion.div>
-                              View
-                            </motion.a>
-                          )}
-                        </div>
+                        <h4 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                          {edu.degree}
+                        </h4>
                         {edu.specialization && (
                           <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                             Specialization: {edu.specialization}
@@ -140,6 +119,24 @@ export default function EducationSection() {
                         <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
                           {edu.period}
                         </p>
+                        {edu.externalUrl && (
+                          <motion.a
+                            href={edu.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 text-white dark:text-black text-sm rounded-lg hover:from-neutral-800 hover:to-neutral-600 dark:hover:from-neutral-200 dark:hover:to-neutral-400 transition-all duration-300 font-medium"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <motion.div
+                              whileHover={{ rotate: 360 }}
+                              transition={{ duration: 0.6 }}
+                            >
+                              <ExternalLink size={14} />
+                            </motion.div>
+                            View
+                          </motion.a>
+                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -148,7 +145,6 @@ export default function EducationSection() {
             </motion.div>
           </motion.div>
 
-          {/* Certifications Section */}
           <motion.div variants={itemVariants}>
             <motion.div
               whileHover={{ y: -8, scale: 1.02 }}
@@ -181,32 +177,30 @@ export default function EducationSection() {
                       transition={{ duration: 0.2 }}
                     >
                       <div className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <h4 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
-                            {cert.name}
-                          </h4>
-                          {cert.pdfUrl && (
-                            <motion.a
-                              href={cert.pdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 text-white dark:text-black text-sm rounded-lg hover:from-neutral-800 hover:to-neutral-600 dark:hover:from-neutral-200 dark:hover:to-neutral-400 transition-all duration-300 font-medium"
-                              whileHover={{ scale: 1.05, y: -2 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <motion.div
-                                whileHover={{ rotate: 360 }}
-                                transition={{ duration: 0.6 }}
-                              >
-                                <ExternalLink size={14} />
-                              </motion.div>
-                              View
-                            </motion.a>
-                          )}
-                        </div>
+                        <h4 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                          {cert.name}
+                        </h4>
                         <p className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">
                           Expiration: {cert.expiration}
                         </p>
+                        {cert.externalUrl && (
+                          <motion.a
+                            href={cert.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 text-white dark:text-black text-sm rounded-lg hover:from-neutral-800 hover:to-neutral-600 dark:hover:from-neutral-200 dark:hover:to-neutral-400 transition-all duration-300 font-medium"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <motion.div
+                              whileHover={{ rotate: 360 }}
+                              transition={{ duration: 0.6 }}
+                            >
+                              <ExternalLink size={14} />
+                            </motion.div>
+                            View
+                          </motion.a>
+                        )}
                       </div>
                     </motion.div>
                   ))}

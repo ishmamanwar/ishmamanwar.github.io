@@ -74,7 +74,6 @@ export default function ExperienceSection() {
           </p>
         </motion.div>
 
-        {/* Desktop/Tablet Timeline Layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -82,7 +81,6 @@ export default function ExperienceSection() {
           viewport={{ once: true, margin: "-10% 0% -10% 0%" }}
           className="relative hidden md:block"
         >
-          {/* Central timeline line */}
           <motion.div
             className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-neutral-300 via-neutral-400 to-neutral-300 dark:from-neutral-600 dark:via-neutral-500 dark:to-neutral-600 transform -translate-x-1/2 origin-top"
             variants={timelineVariants}
@@ -97,7 +95,6 @@ export default function ExperienceSection() {
                   index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
               >
-                {/* Timeline node */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                   <motion.div
                     variants={nodeVariants}
@@ -116,7 +113,6 @@ export default function ExperienceSection() {
                   </motion.div>
                 </div>
 
-                {/* Content card */}
                 <div className={`w-5/12 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
                   <motion.article
                     whileHover={{
@@ -192,7 +188,6 @@ export default function ExperienceSection() {
           </div>
         </motion.div>
 
-        {/* Mobile Vertical Layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

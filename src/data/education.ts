@@ -4,13 +4,13 @@ export interface Education {
   degree: string;
   specialization?: string;
   period: string;
-  pdfUrl?: string;
+  externalUrl?: string;
 }
 
 export interface Certification {
   name: string;
   expiration: string;
-  pdfUrl?: string;
+  externalUrl?: string;
 }
 
 export const EDUCATION: Education[] = [
@@ -20,7 +20,8 @@ export const EDUCATION: Education[] = [
     degree: "Diploma in Digital Media and IT",
     specialization: "Computer Software Development",
     period: "2017 - 2020",
-    pdfUrl: "/NAIT_Diploma_Ishmam_Anwar.pdf",
+    externalUrl:
+      "https://drive.google.com/file/d/1D4fDgWotqCiLCTx-ctw9lLx2VtxhtlUD/view?usp=sharing",
   },
 ];
 
@@ -28,6 +29,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: "Certified ScrumMaster®",
     expiration: "March 5, 2026",
-    pdfUrl: "/Ishmam Anwar-ScrumAlliance_CSM_Certificate.pdf",
+    externalUrl:
+      "https://drive.google.com/file/d/1U0GVQCOMmn5qBRPyaS06H8rYfq7XFvuR/view?usp=sharing",
   },
 ];

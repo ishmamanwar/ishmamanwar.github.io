@@ -61,8 +61,24 @@ export default function Hero({ isLoading }: { isLoading: boolean }) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-4 md:space-y-6"
         >
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex justify-center"
+          >
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-neutral-200 dark:border-neutral-700 shadow-lg">
+              <img
+                src="/picture.JPG"
+                alt={`${SITE.name} profile picture`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight section-title bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight section-title bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 dark:from-neutral-100 dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >

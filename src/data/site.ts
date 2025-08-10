@@ -3,7 +3,8 @@ export const SITE = {
   role: "Full Stack Software Developer",
   location: "East Elmhurst, NY 11370",
   email: "ishmam.anwar780@gmail.com",
-  resumeHref: "/ISHMAM_ANWAR_Resume_2025_August.docx-1.pdf",
+  resumeHref:
+    "https://drive.google.com/file/d/1BYTjFl4_kWxNFRUNhEgCD8L7imdJTJ2o/view?usp=sharing",
   social: {
     github: "https://github.com/ishmamanwar",
     linkedin: "https://www.linkedin.com/in/ishmam-anwar-b374a0158/",

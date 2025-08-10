@@ -23,11 +23,8 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Auto-scroll to hero section when navigating to root URL (same as #top)
   useEffect(() => {
-    // Check if we're at the root URL (no hash)
     if (window.location.hash === "") {
-      // Small delay to ensure the page is fully rendered
       const timer = setTimeout(() => {
         const topSection = document.getElementById("top");
         if (topSection) {
@@ -91,7 +88,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="py-10 text-sm text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-800"
         >
-          <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
+          <div className="max-w-4xl mx-auto px-6 flex flex-row md:flex-row md:items-center justify-start md:justify-between gap-4 md:gap-0">
             <span>
               © {new Date().getFullYear()} {SITE.name}
             </span>
