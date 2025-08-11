@@ -4,7 +4,7 @@ export const SITE = {
   location: "East Elmhurst, NY 11370",
   email: "ishmam.anwar780@gmail.com",
   resumeHref:
-    "https://drive.google.com/file/d/1BYTjFl4_kWxNFRUNhEgCD8L7imdJTJ2o/view?usp=sharing",
+    "https://drive.google.com/file/d/145kGjl0z_c6IRGF3T50AymMDxZ7r8zvf/view?usp=sharing",
   social: {
     github: "https://github.com/ishmamanwar",
     linkedin: "https://www.linkedin.com/in/ishmam-anwar-b374a0158/",
