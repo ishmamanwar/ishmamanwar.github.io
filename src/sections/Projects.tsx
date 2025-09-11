@@ -75,14 +75,14 @@ export default function ProjectsSection() {
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="group bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm relative overflow-hidden"
+              className="group bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-700 rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm relative overflow-hidden h-full flex flex-col"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-800 dark:to-neutral-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 initial={false}
               />
-              <div className="space-y-4 relative z-10">
-                <div>
+              <div className="space-y-4 relative z-10 flex flex-col h-full">
+                <div className="flex-grow">
                   <h3 className="text-lg md:text-xl font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-colors">
                     {p.name}
                   </h3>
@@ -107,8 +107,16 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 md:gap-4">
-                  <figure className="col-span-2 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
+                <div
+                  className={`grid gap-3 md:gap-4 ${
+                    p.mobileGif ? "grid-cols-3" : "grid-cols-1"
+                  }`}
+                >
+                  <figure
+                    className={`border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative ${
+                      p.mobileGif ? "col-span-2" : "col-span-1"
+                    }`}
+                  >
                     <motion.img
                       src={p.desktopGif}
                       alt={p.name + " desktop preview"}
@@ -121,23 +129,25 @@ export default function ProjectsSection() {
                       Desktop
                     </figcaption>
                   </figure>
-                  <figure className="col-span-1 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
-                    <motion.img
-                      src={p.mobileGif}
-                      alt={p.name + " mobile preview"}
-                      className="w-full h-32 md:h-40 object-contain bg-neutral-50 dark:bg-neutral-800"
-                      loading="lazy"
-                      variants={imageVariants}
-                      whileHover="hover"
-                    />
-                    <figcaption className="px-2 py-1 md:px-3 md:py-2 text-xs text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700 text-center font-medium bg-neutral-50 dark:bg-neutral-800">
-                      Mobile
-                    </figcaption>
-                  </figure>
+                  {p.mobileGif && (
+                    <figure className="col-span-1 border border-neutral-200 dark:border-neutral-700 rounded-xl overflow-hidden group-hover:border-neutral-400 dark:group-hover:border-neutral-500 transition-colors relative">
+                      <motion.img
+                        src={p.mobileGif}
+                        alt={p.name + " mobile preview"}
+                        className="w-full h-32 md:h-40 object-contain bg-neutral-50 dark:bg-neutral-800"
+                        loading="lazy"
+                        variants={imageVariants}
+                        whileHover="hover"
+                      />
+                      <figcaption className="px-2 py-1 md:px-3 md:py-2 text-xs text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700 text-center font-medium bg-neutral-50 dark:bg-neutral-800">
+                        Mobile
+                      </figcaption>
+                    </figure>
+                  )}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 text-sm">
-                  {p.live && (
+                  {p.live && p.live !== "deploying-soon" && (
                     <motion.a
                       className="no-underline inline-flex items-center justify-center gap-2 px-3 md:px-4 py-2 bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300 text-white dark:text-black rounded-lg hover:from-neutral-800 hover:to-neutral-600 dark:hover:from-neutral-200 dark:hover:to-neutral-400 transition-all duration-300 font-medium text-center shadow-lg hover:shadow-xl"
                       href={p.live}
@@ -154,6 +164,16 @@ export default function ProjectsSection() {
                       </motion.div>
                       Live Demo
                     </motion.a>
+                  )}
+                  {p.live === "deploying-soon" && (
+                    <motion.div
+                      className="inline-flex items-center justify-center gap-2 px-3 md:px-4 py-2 bg-gradient-to-r from-neutral-400 to-neutral-500 dark:from-neutral-600 dark:to-neutral-500 text-white rounded-lg cursor-not-allowed opacity-75 font-medium text-center shadow-lg"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ExternalLink size={16} />
+                      Deploying Soon
+                    </motion.div>
                   )}
                   {p.repo && (
                     <motion.a

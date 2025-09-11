@@ -5,10 +5,27 @@ export type Project = {
   repo?: string;
   live?: string;
   desktopGif: string;
-  mobileGif: string;
+  mobileGif?: string;
 };
 
 export const PROJECTS: Project[] = [
+  {
+    name: "PJMF COVID-19 Data Dashboard",
+    blurb:
+      "Full-stack web application for visualizing and analyzing COVID-19 hospitalization data. Features interactive data tables, trend analysis charts, and geographic heat maps with advanced filtering capabilities.",
+    tech: [
+      "TypeScript",
+      "React",
+      "Python",
+      "Flask",
+      "Vite",
+      "MUI Charts",
+      "USA Map React",
+    ],
+    repo: "https://github.com/ishmamanwar/pjmf-assignment",
+    live: "deploying-soon",
+    desktopGif: "/assets/covid-dashboard-desktop.gif",
+  },
   {
     name: "Chomchom",
     blurb:
