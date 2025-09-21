@@ -31,6 +31,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     ],
     bullets: [
       "Core member of the Contracts team building reusable Vue.js components across the platform.",
+      "Contributed to the AI-powered auditing tool using the OpenAI API, enabling automated analysis of contract structures and user data for compliance and consistency.",
       "Core developer of Lawbler, an internal low-code authoring tool that lets non-technical staff create and publish legal documents.",
       "Built a Vue-based contract converter CLI (vue-contract-converter) that converts DCS XML to ACS JSON for modernization.",
       "Refactored and extended RESTful APIs in ASP.NET Core to improve performance, modularity, and maintainability.",
