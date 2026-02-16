@@ -1,3 +1,4 @@
+// skills.ts
 import type { LogosKey } from "./logos";
 
 export type SkillGroup = {
@@ -12,7 +13,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     label: "Frontend",
-    items: ["HTML5", "React.js", "Vue.js"],
+    items: ["HTML5", "React.js", "Vue.js", "Vite"],
   },
   {
     label: "UI & Styling",
@@ -20,7 +21,15 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     label: "Backend & APIs",
-    items: ["ASP.NET Core", "Node.js", "Express.js", "Flask", "REST"],
+    items: [
+      "ASP.NET Core",
+      "Node.js",
+      "Express.js",
+      "Laravel",
+      "Django",
+      "Flask",
+      "REST",
+    ],
   },
   {
     label: "Database",
@@ -32,15 +41,27 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     label: "DevOps",
-    items: ["Git", "Docker", "Azure DevOps", "CI/CD", "PowerShell", "Bash"],
+    items: [
+      "Git",
+      "Docker",
+      "GitHub Actions",
+      "Azure DevOps",
+      "CI/CD",
+      "PowerShell",
+      "Bash",
+    ],
+  },
+  {
+    label: "Cloud & Platforms",
+    items: ["AWS", "Vercel", "Render", "Supabase", "GitHub Pages"],
+  },
+  {
+    label: "Monitoring & Release",
+    items: ["Datadog", "LaunchDarkly", "JIRA"],
   },
   {
     label: "LLMs & AI Tools",
     items: ["ChatGPT", "OpenAI", "Claude", "Cursor"],
-  },
-  {
-    label: "Platforms & Hosting",
-    items: ["Vercel", "Render", "Supabase", "GitHub Pages"],
   },
   {
     label: "Practices & Methodologies",

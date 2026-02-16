@@ -1,3 +1,4 @@
+// logos.tsx
 import React from "react";
 
 /**
@@ -202,6 +203,16 @@ export const Logos = {
       />
     </svg>
   ),
+  Vite: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Vite">
+      <polygon
+        points="128,24 212,80 164,232 92,232 44,80"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M122 64l-26 74h28l-18 54 62-86h-34l18-42z" fill="currentColor" />
+    </svg>
+  ),
 
   /* ========== Backend & APIs ========== */
   "ASP.NET Core": (
@@ -243,6 +254,34 @@ export const Logos = {
         fill="none"
         {...strokeCommon}
       />
+    </svg>
+  ),
+  Laravel: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Laravel">
+      <path
+        d="M68 92l60-36 60 36v72l-60 36-60-36V92z"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M128 56v72l60 36" fill="none" {...strokeCommon} />
+      <path d="M128 128L68 164" fill="none" {...strokeCommon} />
+      <path d="M188 92l-60 36-60-36" fill="none" {...strokeCommon} />
+    </svg>
+  ),
+  Django: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Django">
+      <rect
+        x="36"
+        y="36"
+        width="184"
+        height="184"
+        rx="24"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M92 84v88c0 16 12 28 28 28h44" fill="none" {...strokeCommon} />
+      <path d="M164 84v88" fill="none" {...strokeCommon} />
+      <path d="M120 84h44" fill="none" {...strokeCommon} />
     </svg>
   ),
   Flask: (
@@ -458,6 +497,18 @@ export const Logos = {
       />
     </svg>
   ),
+  "GitHub Actions": (
+    <svg
+      viewBox="0 0 256 256"
+      className="w-full h-full"
+      aria-label="GitHub Actions"
+    >
+      <circle cx="128" cy="128" r="92" fill="none" {...strokeCommon} />
+      <path d="M116 92l56 36-56 36z" fill="currentColor" />
+      <path d="M88 168c10 16 24 26 40 30" fill="none" {...strokeCommon} />
+      <circle cx="88" cy="168" r="10" fill="currentColor" />
+    </svg>
+  ),
   "Azure DevOps": (
     <svg
       viewBox="0 0 256 256"
@@ -516,20 +567,127 @@ export const Logos = {
     </svg>
   ),
 
+  /* ========== Cloud & Platforms ========== */
+  AWS: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="AWS">
+      <path
+        d="M84 156H76a40 40 0 0 1 6-80 52 52 0 0 1 100 14 30 30 0 0 1 0 60h-14"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M128 120v76" fill="none" {...strokeCommon} />
+      <path d="M108 180l20 20 20-20" fill="none" {...strokeCommon} />
+    </svg>
+  ),
+  Vercel: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Vercel">
+      <polygon points="128,36 224,220 32,220" fill="currentColor" />
+    </svg>
+  ),
+  Render: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Render">
+      <rect
+        x="28"
+        y="28"
+        width="200"
+        height="200"
+        rx="24"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path
+        d="M88 176v-96h48c20 0 36 16 36 36s-16 36-36 36H88zM136 116h-20v32h20c9 0 16-7 16-16s-7-16-16-16z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+  Supabase: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Supabase">
+      <path
+        d="M128 28l-64 96h52v104l76-112h-56z"
+        fill="none"
+        {...strokeCommon}
+      />
+    </svg>
+  ),
+  "GitHub Pages": (
+    <svg
+      viewBox="0 0 256 256"
+      className="w-full h-full"
+      aria-label="GitHub Pages"
+    >
+      <rect
+        x="40"
+        y="36"
+        width="176"
+        height="184"
+        rx="16"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M72 76h112M72 108h112M72 140h80" fill="none" {...strokeCommon} />
+      <circle cx="180" cy="180" r="22" fill="none" {...strokeCommon} />
+      <path d="M172 176c0-8 6-14 14-14" fill="none" {...strokeCommon} />
+    </svg>
+  ),
+
+  /* ========== Monitoring & Release ========== */
+  Datadog: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Datadog">
+      <rect
+        x="36"
+        y="44"
+        width="184"
+        height="168"
+        rx="22"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path
+        d="M92 160c0-26 16-44 40-44s40 18 40 44"
+        fill="none"
+        {...strokeCommon}
+      />
+      <circle cx="112" cy="128" r="8" fill="currentColor" />
+      <circle cx="144" cy="128" r="8" fill="currentColor" />
+      <path d="M108 92l-16-12M148 92l16-12" fill="none" {...strokeCommon} />
+    </svg>
+  ),
+  LaunchDarkly: (
+    <svg
+      viewBox="0 0 256 256"
+      className="w-full h-full"
+      aria-label="LaunchDarkly"
+    >
+      <path d="M80 208V52" fill="none" {...strokeCommon} />
+      <path d="M84 56h92l-18 26 18 26H84z" fill="none" {...strokeCommon} />
+      <path d="M84 108h74" fill="none" {...strokeCommon} />
+      <circle cx="80" cy="208" r="10" fill="currentColor" />
+    </svg>
+  ),
+  JIRA: (
+    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="JIRA">
+      <path d="M72 88l56-56 56 56-56 56-56-56z" fill="none" {...strokeCommon} />
+      <path
+        d="M72 168l56-56 56 56-56 56-56-56z"
+        fill="none"
+        {...strokeCommon}
+      />
+      <path d="M100 116l56 56" fill="none" {...strokeCommon} />
+    </svg>
+  ),
+
   /* ========== AI & Dev Tools ========== */
   ChatGPT: (
     <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="ChatGPT">
-      {/* chat bubble */}
       <path
         d="M44 72a44 44 0 0 1 44-44h80a44 44 0 0 1 44 44v40a44 44 0 0 1-44 44H120l-36 24v-24h-4a44 44 0 0 1-44-44V72z"
         fill="none"
         {...strokeCommon}
       />
-      {/* three dots */}
       <circle cx="112" cy="112" r="8" fill="currentColor" />
       <circle cx="144" cy="112" r="8" fill="currentColor" />
       <circle cx="176" cy="112" r="8" fill="currentColor" />
-      {/* subtle spark */}
       <path d="M196 60l6 6M202 60l-6 6" {...strokeCommon} />
     </svg>
   ),
@@ -588,59 +746,6 @@ export const Logos = {
         {...strokeCommon}
       />
       <path d="M128 92l24 64-18-8-10 18z" fill="none" {...strokeCommon} />
-    </svg>
-  ),
-
-  /* ========== Platforms & Hosting ========== */
-  Vercel: (
-    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Vercel">
-      <polygon points="128,36 224,220 32,220" fill="currentColor" />
-    </svg>
-  ),
-  Render: (
-    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Render">
-      <rect
-        x="28"
-        y="28"
-        width="200"
-        height="200"
-        rx="24"
-        fill="none"
-        {...strokeCommon}
-      />
-      <path
-        d="M88 176v-96h48c20 0 36 16 36 36s-16 36-36 36H88zM136 116h-20v32h20c9 0 16-7 16-16s-7-16-16-16z"
-        fill="currentColor"
-      />
-    </svg>
-  ),
-  Supabase: (
-    <svg viewBox="0 0 256 256" className="w-full h-full" aria-label="Supabase">
-      <path
-        d="M128 28l-64 96h52v104l76-112h-56z"
-        fill="none"
-        {...strokeCommon}
-      />
-    </svg>
-  ),
-  "GitHub Pages": (
-    <svg
-      viewBox="0 0 256 256"
-      className="w-full h-full"
-      aria-label="GitHub Pages"
-    >
-      <rect
-        x="40"
-        y="36"
-        width="176"
-        height="184"
-        rx="16"
-        fill="none"
-        {...strokeCommon}
-      />
-      <path d="M72 76h112M72 108h112M72 140h80" fill="none" {...strokeCommon} />
-      <circle cx="180" cy="180" r="22" fill="none" {...strokeCommon} />
-      <path d="M172 176c0-8 6-14 14-14" fill="none" {...strokeCommon} />
     </svg>
   ),
 
@@ -718,12 +823,24 @@ const ALIASES: Record<string, LogosKey> = {
   "Testing Library": "React Testing Library",
   Github: "GitHub Pages",
   GitHub: "GitHub Pages",
+  "GitHub Actions": "GitHub Actions",
+  "Github Actions": "GitHub Actions",
+  "Github actions": "GitHub Actions",
   HTML: "HTML5",
   CSS3: "CSS",
   Sass: "SCSS",
   SASS: "SCSS",
   Tailwind: "Tailwind CSS",
   TailwindCSS: "Tailwind CSS",
+  "Vite.js": "Vite",
+
+  // Cloud/tooling aliases
+  Jira: "JIRA",
+  JirA: "JIRA",
+  "Launch Darkly": "LaunchDarkly",
+  "LaunchDarkly SDK": "LaunchDarkly",
+  "AWS S3": "AWS",
+  S3: "AWS",
 
   // AI tool aliases
   GPT: "ChatGPT",
